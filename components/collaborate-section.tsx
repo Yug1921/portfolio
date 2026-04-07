@@ -53,7 +53,7 @@ export function CollaborateSection() {
 
           {/* Resume Button */}
           <a
-            href="/resume/Yug_Upadyay_Full_Stack_Developer.pdf"
+            href="/resume/Yug_Upadhyay_Full_Stack_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-2.5 rounded-full font-mono text-sm font-semibold hover:bg-accent transition-all duration-300"
