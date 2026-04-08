@@ -14,7 +14,7 @@ const experiments = [
     description:
       "Engineered an end-to-end DPI system to process PCAP files, classify traffic by application/domain, and generate filtered PCAP outputs.",
     techStack: ["Java", "Node.js", "Express.js", "React.js", "TailwindCSS", "Multithreading"],
-    github: "https://github.com/Yug1921",
+    github: "https://github.com/Yug1921/DPI-Engine-Java",
     demo: null,
   },
   {
@@ -24,6 +24,15 @@ const experiments = [
       "Built a full-stack platform for reservations, order tracking, and table bookings with normalized MySQL schema and responsive UI.",
     techStack: ["React.js", "Node.js", "Express.js", "MySQL", "REST APIs"],
     github: "https://github.com/Yug1921/RMS",
+    demo: null,
+  },
+  {
+    title: "Student Course Registration System",
+    medium: "MERN-Style Application / 2026",
+    description:
+      "Built a full-stack course registration platform with JWT-based auth, secure password handling, course browsing, and enrollment dashboard workflows.",
+    techStack: ["HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT"],
+    github: "https://github.com/Yug1921/Student_Course_Registration_App",
     demo: null,
   },
 ]

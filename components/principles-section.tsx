@@ -23,36 +23,6 @@ export function PrinciplesSection() {
         "Developed and maintained production React components, improving UI consistency and user experience across the platform.",
       align: "left",
     },
-    {
-      number: "02",
-      titleParts: [
-        { text: "Performance Optimization", highlight: true },
-        { text: " in React", highlight: false },
-      ],
-      description:
-        "Optimized state management and custom hooks to reduce unnecessary re-renders and improve performance for larger data payloads.",
-      align: "right",
-    },
-    {
-      number: "03",
-      titleParts: [
-        { text: "Reusable Component", highlight: true },
-        { text: " Systems", highlight: false },
-      ],
-      description:
-        "Built reusable and well-documented component libraries while following collaborative development workflows.",
-      align: "left",
-    },
-    {
-      number: "04",
-      titleParts: [
-        { text: "Agile Delivery", highlight: true },
-        { text: " Collaboration", highlight: false },
-      ],
-      description:
-        "Collaborated with senior engineers in Agile sprints, code reviews, and daily stand-ups to deliver features on schedule.",
-      align: "right",
-    },
   ]
 
   useEffect(() => {
