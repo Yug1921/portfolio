@@ -18,9 +18,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas" })
 
 export const metadata: Metadata = {
-  title: "Yug Upadhyay - Full-Stack Product Engineer",
+  title: "Yug Upadhyay - Full-Stack Engineer · Cloud-Integrated · AI-Augmented Development",
   description:
-    "Full-stack developer with hands-on experience in React.js, Node.js, and AWS, focused on performance optimization and scalable product engineering.",
+    "Production-focused Full-Stack Engineer architecting and shipping scalable web applications using MERN, Next.js, and AWS—from zero-to-production. Accelerates delivery cycles 3× faster through AI-augmented workflows (Claude, Copilot, Cursor). Proficient in LLM integration, microservices, and cloud-native solutions with a security-first mindset.",
   generator: "v0.app",
   icons: {
     icon: [

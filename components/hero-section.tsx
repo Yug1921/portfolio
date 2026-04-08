@@ -48,13 +48,27 @@ export function HeroSection() {
           </div>
         </SplitFlapAudioProvider>
 
-        <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(0.875rem,2vw,1.25rem)] mt-2 tracking-wide">
-          Full-Stack Product Engineer (AI-Augmented Development)
+        <h2 className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-(--font-bebas) text-[clamp(0.875rem,2vw,1.25rem)] tracking-wide text-muted-foreground/70">
+          <span>Building the Next Layer</span>
+          <span className="text-accent/80">|</span>
+          <span className="text-foreground/85">Full-Stack</span>
+          <span className="text-accent/80">×</span>
+          <span className="text-foreground/85">Cloud</span>
+          <span className="text-accent/80">×</span>
+          <span className="text-foreground/85">AI</span>
         </h2>
 
-        <p className="mt-4 font-mono text-xs md:text-sm text-muted-foreground leading-relaxed">
-          Full-stack developer with hands-on experience building production-grade web applications using React.js, Node.js, and AWS.
-          Proven ability to optimize system performance from 60s to 1-3s while delivering responsive, scalable UI/UX.
+        <p className="mt-5 mx-auto max-w-xl font-mono text-xs leading-relaxed text-muted-foreground md:text-sm">
+          <span className="text">Production-focused Full-Stack Engineer architecting and shipping{" "}</span>
+          <span className="inline-block">
+            scalable web applications
+          </span>{" "}
+          using <span className="text">MERN, Next.js, and AWS</span> from{" "}
+          <span className="inline-flex flex-col items-start gap-2 align-middle">
+            <span className="text-[12px] uppercase tracking-[0.25em] text-foreground/70">zero to production</span>
+    
+          </span>
+          .
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
@@ -63,7 +77,7 @@ export function HeroSection() {
             className="group inline-flex items-center gap-2 border border-foreground/20 px-5 py-2 font-mono text-[10px] uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
             <ScrambleTextOnHover text="View Projects" as="span" duration={0.6} />
-            <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
+            <BitmapChevron className="transition-transform duration-400 ease-in-out group-hover:rotate-45" />
           </a>
           <a
             href="#signals"

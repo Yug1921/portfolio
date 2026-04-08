@@ -7,7 +7,7 @@ export function CollaborateSection() {
     <section className="relative py-8 md:py-10 px-4 md:px-6 border-b border-border/20">
       <div className="max-w-2xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="font-[var(--font-bebas)] text-xl md:text-2xl tracking-tight mb-4">
+        <h2 className="font-[var(--font-bebas)] text-xl md:text-5xl tracking-tight mb-4">
           Let's collaborate
         </h2>
 
@@ -19,7 +19,7 @@ export function CollaborateSection() {
               href="https://github.com/Yug1921"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
               title="GitHub"
             >
               <Github size={20} />
@@ -28,7 +28,7 @@ export function CollaborateSection() {
               href="https://linkedin.com/in/yug-upadhyay"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
               title="LinkedIn"
             >
               <Linkedin size={20} />
@@ -37,14 +37,14 @@ export function CollaborateSection() {
               href="https://twitter.com/YugUpadhyay"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
               title="X (Twitter)"
             >
               <Twitter size={20} />
             </a>
             <a
               href="mailto:yugyugupadhyay@gmail.com"
-              className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
               title="Email"
             >
               <Mail size={20} />
