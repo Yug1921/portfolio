@@ -4,22 +4,28 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 
 export function CollaborateSection() {
   return (
-    <section className="relative py-8 md:py-10 px-4 md:px-6 border-b border-border/20">
+    <section className="relative py-10 md:py-14 px-4 md:px-6 border-b border-border/25 bg-linear-to-b from-transparent via-accent/5 to-transparent">
       <div className="max-w-2xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="font-[var(--font-bebas)] text-xl md:text-5xl tracking-tight mb-4">
+        <span className="mb-3 inline-flex items-center font-mono text-[11px] md:text-sm uppercase tracking-[0.28em] text-accent/90">
+          02 / Contact
+        </span>
+        <h2 className="font-(--font-bebas) text-4xl md:text-6xl leading-none tracking-tight text-foreground mb-3">
           Let's collaborate
         </h2>
+        <p className="mx-auto max-w-md font-mono text-[12px] md:text-base leading-relaxed text-muted-foreground">
+          Open to internships, freelance work, and product-focused full-stack builds.
+        </p>
 
         {/* Social Icons and Resume Button */}
-        <div className="flex flex-col items-center gap-4">
+        <div className="mt-6 flex flex-col items-center gap-4">
           {/* Social Icons */}
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-4 md:gap-5">
             <a
               href="https://github.com/Yug1921"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/20 bg-accent/5 text-foreground/75 shadow-sm transition-all duration-300 hover:border-accent/70 hover:bg-accent/15 hover:text-accent hover:shadow-accent/15"
               title="GitHub"
             >
               <Github size={20} />
@@ -28,7 +34,7 @@ export function CollaborateSection() {
               href="https://linkedin.com/in/yug-upadhyay"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/20 bg-accent/5 text-foreground/75 shadow-sm transition-all duration-300 hover:border-accent/70 hover:bg-accent/15 hover:text-accent hover:shadow-accent/15"
               title="LinkedIn"
             >
               <Linkedin size={20} />
@@ -37,14 +43,14 @@ export function CollaborateSection() {
               href="https://twitter.com/YugUpadhyay"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/20 bg-accent/5 text-foreground/75 shadow-sm transition-all duration-300 hover:border-accent/70 hover:bg-accent/15 hover:text-accent hover:shadow-accent/15"
               title="X (Twitter)"
             >
               <Twitter size={20} />
             </a>
             <a
               href="mailto:yugyugupadhyay@gmail.com"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-border/40 text-foreground/70 hover:text-accent hover:border-accent/60 transition-all duration-300"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/20 bg-accent/5 text-foreground/75 shadow-sm transition-all duration-300 hover:border-accent/70 hover:bg-accent/15 hover:text-accent hover:shadow-accent/15"
               title="Email"
             >
               <Mail size={20} />
@@ -56,7 +62,7 @@ export function CollaborateSection() {
             href="/resume/Yug_Upadhyay_Full_Stack_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-2.5 rounded-full font-mono text-sm font-semibold hover:bg-accent transition-all duration-300"
+            className="inline-flex items-center gap-2 rounded-full border border-accent/60 bg-accent px-6 py-2.5 font-mono text-sm font-semibold text-background shadow-lg shadow-accent/15 transition-all duration-300 hover:border-accent hover:bg-accent-light hover:text-background"
           >
             View Resume
           </a>

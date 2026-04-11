@@ -55,7 +55,7 @@ export function SideNav() {
             />
             <span
               className={cn(
-                "absolute left-12 font-mono text-[8px] uppercase tracking-widest opacity-0 transition-all duration-200 group-hover:opacity-100 whitespace-nowrap",
+                "absolute left-12 font-mono text-[10px] uppercase tracking-widest opacity-0 transition-all duration-200 group-hover:opacity-100 whitespace-nowrap",
                 activeSection === id ? "text-accent" : "text-muted-foreground/70",
               )}
             >

@@ -27,7 +27,7 @@ export function GitHubActivitySection() {
 
           <div className="h-40 border border-border/40 rounded-lg animate-pulse flex items-center justify-center">
 
-            <span className="font-mono text-xs text-muted-foreground">
+            <span className="font-mono text-sm text-muted-foreground">
               Loading GitHub activity...
             </span>
 
@@ -56,7 +56,7 @@ export function GitHubActivitySection() {
 
         <div className="mb-6">
 
-          <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-accent">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">
             Contributions
           </span>
 
@@ -64,7 +64,7 @@ export function GitHubActivitySection() {
             GITHUB ACTIVITY
           </h2>
 
-          <p className="mt-2 font-mono text-[10px] text-muted-foreground">
+          <p className="mt-2 font-mono text-[11px] md:text-sm text-muted-foreground leading-relaxed">
             Daily coding activity and open-source contributions visualized.
           </p>
 
@@ -129,7 +129,7 @@ export function GitHubActivitySection() {
 
         {/* Legend */}
 
-        <div className="mt-4 flex justify-center items-center gap-2 text-[10px] font-mono text-muted-foreground">
+        <div className="mt-4 flex justify-center items-center gap-2 text-[11px] font-mono text-muted-foreground">
 
           <span>Less</span>
 

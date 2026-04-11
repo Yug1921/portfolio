@@ -29,7 +29,7 @@ export function EducationSection() {
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <div className="mb-6">
-          <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-accent">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">
             Academic
           </span>
           <h2 className="mt-1 font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight">
@@ -60,10 +60,10 @@ export function EducationSection() {
                   <h3 className="font-[var(--font-bebas)] text-base md:text-lg tracking-tight group-hover:text-accent transition-colors duration-300">
                     {edu.degree}
                   </h3>
-                  <p className="font-mono text-[10px] text-muted-foreground/70 mt-0.5">
+                  <p className="font-mono text-[11px] text-muted-foreground/75 mt-0.5">
                     {edu.institution} • {edu.year}
                   </p>
-                  <p className="font-mono text-[10px] text-muted-foreground leading-tight mt-2">
+                  <p className="font-mono text-[11px] md:text-sm text-muted-foreground leading-relaxed mt-2">
                     {edu.description}
                   </p>
                 </div>

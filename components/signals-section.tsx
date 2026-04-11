@@ -152,7 +152,7 @@ export function SignalsSection() {
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <div ref={headerRef} className="mb-6">
-          <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-accent">01 / Skills</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">01 / Skills</span>
           <h2 className="mt-1 font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight">EXPERTISE</h2>
         </div>
 
@@ -195,10 +195,10 @@ function SignalCard({
 
         {/* Meta info */}
         <div className="flex items-baseline justify-between gap-1">
-          <span className="font-mono text-[7px] uppercase tracking-[0.15em] text-muted-foreground/60">
+          <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground/75">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <time className="font-mono text-[7px] text-muted-foreground/40 text-right">{signal.date}</time>
+          <time className="font-mono text-[10px] text-muted-foreground/65 text-right">{signal.date}</time>
         </div>
 
         {/* Title */}
@@ -207,7 +207,7 @@ function SignalCard({
         </h3>
 
         {/* Description */}
-        <p className="font-mono text-[10px] text-muted-foreground leading-tight">
+        <p className="font-mono text-[11px] md:text-sm text-muted-foreground leading-relaxed">
           {signal.note}
         </p>
       </div>

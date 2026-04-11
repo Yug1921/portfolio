@@ -18,6 +18,15 @@ const experiments = [
     demo: null,
   },
   {
+    title: "CropCart",
+    medium: "MERN Stack Project",
+    description:
+      "A full-stack web application that bridges the gap between farmers and consumers with farmer profiles, consumer dashboards, messaging, order requests, and an admin panel.",
+    techStack: ["React JS", "Tailwind CSS", "React Redux", "Node JS", "Express JS", "MongoDB", "JWT"],
+    github: "https://github.com/Yug1921/CropCart/",
+    demo: "https://crop-cart-six.vercel.app/",
+  },
+  {
     title: "RMS - Restaurant Management System",
     medium: "Full-Stack Platform / 2024",
     description:
@@ -143,7 +152,7 @@ function WorkCard({
 
       {/* Meta */}
       <div>
-        <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-accent/80 group-hover:text-accent transition-colors duration-300 font-semibold">
+        <span className="inline-flex items-center rounded-full border border-accent/45 bg-accent/10 px-3 py-1 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-accent-light shadow-sm transition-colors duration-300 group-hover:border-accent/70 group-hover:bg-accent/15 group-hover:text-accent">
           {experiment.medium}
         </span>
         <h3 className="mt-2 font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight group-hover:text-accent transition-colors duration-300">
