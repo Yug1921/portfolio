@@ -1,15 +1,12 @@
 "use client"
 
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 export function CollaborateSection() {
   return (
     <section className="relative py-10 md:py-14 px-4 md:px-6 border-b border-border/25 bg-linear-to-b from-transparent via-accent/5 to-transparent">
       <div className="max-w-2xl mx-auto text-center">
         {/* Heading */}
-        <span className="mb-3 inline-flex items-center font-mono text-[11px] md:text-sm uppercase tracking-[0.28em] text-accent/90">
-          02 / Contact
-        </span>
         <h2 className="font-(--font-bebas) text-4xl md:text-6xl leading-none tracking-tight text-foreground mb-3">
           Let's collaborate
         </h2>
@@ -31,7 +28,7 @@ export function CollaborateSection() {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/yug-upadhyay"
+              href="https://www.linkedin.com/in/yug-upadhyay-2a91b8316/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/20 bg-accent/5 text-foreground/75 shadow-sm transition-all duration-300 hover:border-accent/70 hover:bg-accent/15 hover:text-accent hover:shadow-accent/15"
@@ -40,13 +37,13 @@ export function CollaborateSection() {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://twitter.com/YugUpadhyay"
+              href="https://x.com/Yug_1921"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-accent/20 bg-accent/5 text-foreground/75 shadow-sm transition-all duration-300 hover:border-accent/70 hover:bg-accent/15 hover:text-accent hover:shadow-accent/15"
-              title="X (Twitter)"
+              title="X"
             >
-              <Twitter size={20} />
+              <span className="font-mono text-[18px] font-semibold leading-none">X</span>
             </a>
             <a
               href="mailto:yugyugupadhyay@gmail.com"

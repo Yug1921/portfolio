@@ -12,10 +12,19 @@ const experiments = [
     title: "DPI - Deep Packet Inspector",
     medium: "Cybersecurity System / 2025",
     description:
-      "Engineered an end-to-end DPI system to process PCAP files, classify traffic by application/domain, and generate filtered PCAP outputs.",
-    techStack: ["Java", "Node.js", "Express.js", "React.js", "TailwindCSS", "Multithreading"],
+      "Developed a Java tool that reads PCAP files, inspects each packet to detect apps and domains (YouTube, Netflix, etc.), applies block rules, and exports filtered PCAP outputs via a web dashboard.",
+    techStack: [
+      "Java 17 ",
+      "Node.js",
+      "Express",
+      "React 19",
+      "Tailwind CSS",
+      "Recharts",
+      "Render (backend)",
+      "Vercel (frontend)",
+    ],
     github: "https://github.com/Yug1921/DPI-Engine-Java",
-    demo: null,
+    demo: "https://dpi-engine-java.vercel.app/dashboard",
   },
   {
     title: "CropCart",
