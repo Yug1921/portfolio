@@ -42,7 +42,6 @@ export function AnimatedNoise({ opacity = 0.05, className }: AnimatedNoiseProps)
 
     const animate = () => {
       frame++
-      // Update noise every 2 frames for performance while still looking animated
       if (frame % 2 === 0) {
         generateNoise()
       }
