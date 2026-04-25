@@ -41,7 +41,7 @@ export function AnimatedNoise({ opacity = 0.05, className }: AnimatedNoiseProps)
     }
 
     const animate = () => {
-      frame++
+      frame++   
       if (frame % 2 === 0) {
         generateNoise()
       }
