@@ -11,7 +11,7 @@ export function CollaborateSection() {
           Let's collaborate
         </h2>
         <p className="mx-auto max-w-md font-mono text-[12px] md:text-base leading-relaxed text-muted-foreground">
-          Open to internships, freelance work, and product-focused full-stack builds.
+          Actively seeking AWS Cloud Internship opportunities. Open to cloud engineering, full-stack builds, and security-focused projects.
         </p>
 
         {/* Social Icons and Resume Button */}

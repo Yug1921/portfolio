@@ -4,15 +4,27 @@ import { GraduationCap } from "lucide-react"
 
 const education = [
   {
+    degree: "AWS Academy Graduate — Cloud Security Foundations",
+    institution: "Amazon Web Services",
+    year: "2026",
+    description: "Certified in cloud security best practices, IAM hardening, and secure infrastructure design.",
+  },
+  {
+    degree: "AWS Academy Graduate — Cloud Foundations",
+    institution: "Amazon Web Services",
+    year: "2025",
+    description: "Certified in core AWS services including EC2, VPC, S3, Lambda, and CloudWatch.",
+  },
+  {
     degree: "B.Tech in Computer Science Engineering",
     institution: "Karnavati University",
-    year: "2022 - Present",
+    year: "2024 - Present",
     description: "Ahmedabad, Gujarat.",
   },
   {
     degree: "Diploma in Information Technology",
     institution: "LJ University",
-    year: "2019 - 2022",
+    year: "2021 - 2024",
     description: "CGPA: 7.50 / 10.",
   },
   {

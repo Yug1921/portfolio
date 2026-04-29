@@ -31,22 +31,27 @@ const signals = [
   {
     date: "SKILL.05",
     title: "Cloud & DevOps",
-    note: "AWS (EC2, S3, Lambda, CloudWatch, IAM, VPC), CI/CD basics, and cloud security fundamentals.",
+    note: "AWS (EC2, VPC, S3, Lambda, IAM, CloudTrail, CloudWatch, Security Groups, NACLs), CI/CD, Docker, and cloud security.",
   },
   {
     date: "SKILL.06",
     title: "Developer Tools",
-    note: "Git, GitHub, Postman, Figma, Tableau, and Power BI.",
+    note: "Git, GitHub Actions, Postman, Figma, Docker, Vercel, and Render.",
   },
   {
     date: "SKILL.07",
     title: "Core Concepts",
-    note: "Data structures and algorithms, OOP in Java, Agile/Scrum, and software engineering fundamentals.",
+    note: "Data structures and algorithms, OOP, Agile/Scrum, system design, and security-first development.",
   },
   {
     date: "CERT.01",
     title: "AWS Academy Graduate",
-    note: "Cloud Security Foundations (2026).",
+    note: "Cloud Security Foundations (2026) — IAM hardening, audit pipelines, and threat detection.",
+  },
+  {
+    date: "CERT.02",
+    title: "AWS Academy Graduate",
+    note: "Cloud Foundations (2025) — VPC design, EC2 deployment, and Well-Architected Framework principles.",
   },
 ]
 

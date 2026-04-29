@@ -27,6 +27,15 @@ const experiments = [
     demo: "https://dpi-engine-java.vercel.app/dashboard",
   },
   {
+    title: "Secure Cloud Infrastructure Deployment on AWS",
+    medium: "AWS Cloud Infrastructure / 2026",
+    description:
+      "Provisioned a custom Amazon VPC with public and private subnets, route tables, and internet gateway, deployed an EC2-hosted web server demonstrating end-to-end cloud network architecture. Enforced identity security by configuring IAM users, groups, and least-privilege policies. Implemented a full audit and monitoring pipeline using CloudTrail and CloudWatch alarms for detecting unauthorized access.",
+    techStack: ["AWS EC2", "VPC", "IAM", "S3", "CloudTrail", "CloudWatch", "Security Groups", "NACLs"],
+    github: null,
+    demo: null,
+  },
+  {
     title: "CropCart",
     medium: "MERN Stack Project",
     description:
@@ -150,7 +159,7 @@ function WorkCard({
     <article
       ref={cardRef}
       className={cn(
-        "group relative border border-border/30 p-5 md:p-8 flex flex-col gap-4 transition-all duration-300 overflow-hidden",
+        "group relative border border-border/30 p-4 md:p-6 flex flex-col gap-3 transition-all duration-300 overflow-hidden",
         "hover:border-accent/80 hover:bg-accent/10 hover:shadow-xl",
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -164,25 +173,25 @@ function WorkCard({
         <span className="inline-flex items-center rounded-full border border-accent/45 bg-accent/10 px-3 py-1 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-accent-light shadow-sm transition-colors duration-300 group-hover:border-accent/70 group-hover:bg-accent/15 group-hover:text-accent">
           {experiment.medium}
         </span>
-        <h3 className="mt-2 font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight group-hover:text-accent transition-colors duration-300">
+        <h3 className="mt-1.5 font-[var(--font-bebas)] text-xl md:text-2xl tracking-tight group-hover:text-accent transition-colors duration-300">
           {experiment.title}
         </h3>
       </div>
 
       {/* Description */}
       <p className={cn(
-        "font-mono text-[12px] md:text-sm text-foreground/75 leading-relaxed transition-all duration-300",
+        "font-mono text-[11px] md:text-xs text-foreground/75 leading-relaxed transition-all duration-300",
         isHovered ? "text-foreground/95" : "text-foreground/75",
       )}>
         {experiment.description}
       </p>
 
       {/* Tech Stack */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-1.5">
         {experiment.techStack.map((tech, idx) => (
           <span
             key={idx}
-            className="inline-block bg-gradient-to-r from-accent/25 to-accent/15 border border-accent/60 px-3.5 py-1.5 rounded-md text-[11px] md:text-xs text-accent font-mono font-semibold hover:from-accent/35 hover:to-accent/25 hover:border-accent hover:text-accent-light transition-all duration-300 cursor-default"
+            className="inline-block bg-gradient-to-r from-accent/25 to-accent/15 border border-accent/60 px-3 py-1 rounded-md text-[10px] md:text-xs text-accent font-mono font-semibold hover:from-accent/35 hover:to-accent/25 hover:border-accent hover:text-accent-light transition-all duration-300 cursor-default"
           >
             {tech}
           </span>
@@ -190,26 +199,30 @@ function WorkCard({
       </div>
 
       {/* Links */}
-      <div className="flex flex-wrap gap-2.5 mt-2 pt-4 border-t border-border/25">
-        <a
-          href={experiment.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center text-[11px] md:text-sm font-mono text-foreground/80 hover:text-accent font-semibold transition-all duration-300 border border-border/40 px-4 py-2 rounded-md hover:border-accent/80 hover:bg-accent/15"
-        >
-          → GitHub
-        </a>
-        {experiment.demo && (
-          <a
-            href={experiment.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-[11px] md:text-sm font-mono text-foreground/80 hover:text-accent font-semibold transition-all duration-300 border border-border/40 px-4 py-2 rounded-md hover:border-accent/80 hover:bg-accent/15"
-          >
-            ↗ Live Demo
-          </a>
-        )}
-      </div>
+      {(experiment.github || experiment.demo) && (
+        <div className="flex flex-wrap gap-2 mt-1 pt-3 border-t border-border/25">
+          {experiment.github && (
+            <a
+              href={experiment.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[10px] md:text-xs font-mono text-foreground/80 hover:text-accent font-semibold transition-all duration-300 border border-border/40 px-3 py-1.5 rounded-md hover:border-accent/80 hover:bg-accent/15"
+            >
+              → GitHub
+            </a>
+          )}
+          {experiment.demo && (
+            <a
+              href={experiment.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[10px] md:text-xs font-mono text-foreground/80 hover:text-accent font-semibold transition-all duration-300 border border-border/40 px-3 py-1.5 rounded-md hover:border-accent/80 hover:bg-accent/15"
+            >
+              ↗ Live Demo
+            </a>
+          )}
+        </div>
+      )}
 
       {/* Index */}
       <span className="absolute top-5 right-5 font-mono text-[11px] text-muted-foreground/40 group-hover:text-accent/50 transition-colors duration-300">

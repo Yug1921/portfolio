@@ -49,21 +49,21 @@ export function HeroSection() {
         </SplitFlapAudioProvider>
 
         <h2 className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-(--font-bebas) text-[clamp(0.875rem,2vw,1.25rem)] tracking-wide text-muted-foreground/70">
-          <span>Building the Next Layer</span>
+          <span>AWS Cloud Certified Engineer</span>
           <span className="text-accent/80">|</span>
           <span className="text-foreground/85">Full-Stack</span>
           <span className="text-accent/80">×</span>
-          <span className="text-foreground/85">Cloud</span>
+          <span className="text-foreground/85">Cloud Security</span>
           <span className="text-accent/80">×</span>
-          <span className="text-foreground/85">AI</span>
+          <span className="text-foreground/85">DevOps</span>
         </h2>
 
         <p className="mt-5 mx-auto max-w-xl font-mono text-xs leading-relaxed text-muted-foreground md:text-sm">
-          <span className="text">Production-focused Full-Stack Engineer architecting and shipping{" "}</span>
+          <span className="text">AWS-certified Full-Stack Engineer with hands-on experience deploying secure cloud infrastructure on AWS—VPC design, IAM hardening, and CloudTrail audit pipelines. Building production-grade applications using{" "}</span>
           <span className="inline-block">
-            scalable web applications
+            MERN and Next.js
           </span>{" "}
-          using <span className="text">MERN, Next.js, and AWS</span> from{" "}
+          with a <span className="text">security-first mindset</span> from{" "}
           <span className="inline-flex flex-col items-start gap-2 align-middle">
             <span className="text-[12px] uppercase tracking-[0.25em] text-foreground/70">zero to production</span>
     

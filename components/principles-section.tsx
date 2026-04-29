@@ -16,6 +16,16 @@ export function PrinciplesSection() {
     {
       number: "01",
       titleParts: [
+        { text: "AWS Cloud Intern Candidate", highlight: true },
+        { text: " - Full-Stack Cloud Engineer", highlight: false },
+      ],
+      description:
+        "Actively pursuing AWS Cloud Internship with hands-on expertise in VPC design, IAM hardening, EC2 deployment, and CloudTrail audit pipelines. AWS Academy certified in Cloud Security and Cloud Foundations.",
+      align: "left",
+    },
+    {
+      number: "02",
+      titleParts: [
         { text: "Software Developer Intern", highlight: true },
         { text: " - Sparks to Ideas (2023)", highlight: false },
       ],
