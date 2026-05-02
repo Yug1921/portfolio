@@ -27,6 +27,15 @@ const experiments = [
     demo: "https://dpi-engine-java.vercel.app/dashboard",
   },
   {
+    title: "ContentForge — AI Marketing Content Platform 2026",
+    medium: "AI Marketing Platform / 2026",
+    description:
+      "Built a full-stack AI content platform that generates platform-specific marketing copy from one campaign brief across 7 channels, reducing drafting time by about 60%. Added a structured prompt workflow with tone, audience, and CTA controls, plus a Tone Rewriter for side-by-side rewrites. Deployed on Vercel with secure server-side API routes and a responsive UI for non-technical marketing users.",
+    techStack: ["Next.js", "OpenRouter AI", "Tailwind CSS", "REST API", "Prompt Engineering", "Vercel"],
+    github: "https://github.com/Yug1921/ContentForge",
+    demo: "https://content-forge-sand.vercel.app/",
+  },
+  {
     title: "Secure Cloud Infrastructure Deployment on AWS",
     medium: "AWS Cloud Infrastructure / 2026",
     description:
@@ -118,7 +127,7 @@ export function WorkSection() {
         {/* Section header */}
         <div ref={headerRef} className="mb-6">
           <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-accent">03 / Projects</span>
-          <h2 className="mt-1 font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight">FEATURED WORK</h2>
+          <h2 className="mt-1 font-(--font-bebas) text-3xl md:text-4xl tracking-tight">FEATURED WORK</h2>
           <p className="mt-3 font-mono text-xs text-muted-foreground leading-relaxed">
             Production-oriented projects focused on performance, full-stack architecture, and reliable delivery.
           </p>
@@ -166,14 +175,14 @@ function WorkCard({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/80 to-accent/30 group-hover:from-accent to-accent/60 transition-all duration-300" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-accent/80 to-accent/30 group-hover:from-accent group-hover:to-accent/60 transition-all duration-300" />
 
       {/* Meta */}
       <div>
         <span className="inline-flex items-center rounded-full border border-accent/45 bg-accent/10 px-3 py-1 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-accent-light shadow-sm transition-colors duration-300 group-hover:border-accent/70 group-hover:bg-accent/15 group-hover:text-accent">
           {experiment.medium}
         </span>
-        <h3 className="mt-1.5 font-[var(--font-bebas)] text-xl md:text-2xl tracking-tight group-hover:text-accent transition-colors duration-300">
+        <h3 className="mt-1.5 font-(--font-bebas) text-xl md:text-2xl tracking-tight group-hover:text-accent transition-colors duration-300">
           {experiment.title}
         </h3>
       </div>
@@ -191,7 +200,7 @@ function WorkCard({
         {experiment.techStack.map((tech, idx) => (
           <span
             key={idx}
-            className="inline-block bg-gradient-to-r from-accent/25 to-accent/15 border border-accent/60 px-3 py-1 rounded-md text-[10px] md:text-xs text-accent font-mono font-semibold hover:from-accent/35 hover:to-accent/25 hover:border-accent hover:text-accent-light transition-all duration-300 cursor-default"
+            className="inline-block bg-linear-to-r from-accent/25 to-accent/15 border border-accent/60 px-3 py-1 rounded-md text-[10px] md:text-xs text-accent font-mono font-semibold hover:from-accent/35 hover:to-accent/25 hover:border-accent hover:text-accent-light transition-all duration-300 cursor-default"
           >
             {tech}
           </span>
