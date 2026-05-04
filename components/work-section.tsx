@@ -36,15 +36,6 @@ const experiments = [
     demo: "https://content-forge-sand.vercel.app/",
   },
   {
-    title: "Secure Cloud Infrastructure Deployment on AWS",
-    medium: "AWS Cloud Infrastructure / 2026",
-    description:
-      "Provisioned a custom Amazon VPC with public and private subnets, route tables, and internet gateway, deployed an EC2-hosted web server demonstrating end-to-end cloud network architecture. Enforced identity security by configuring IAM users, groups, and least-privilege policies. Implemented a full audit and monitoring pipeline using CloudTrail and CloudWatch alarms for detecting unauthorized access.",
-    techStack: ["AWS EC2", "VPC", "IAM", "S3", "CloudTrail", "CloudWatch", "Security Groups", "NACLs"],
-    github: null,
-    demo: null,
-  },
-  {
     title: "CropCart",
     medium: "MERN Stack Project",
     description:
@@ -52,6 +43,15 @@ const experiments = [
     techStack: ["React JS", "Tailwind CSS", "React Redux", "Node JS", "Express JS", "MongoDB", "JWT"],
     github: "https://github.com/Yug1921/CropCart/",
     demo: "https://crop-cart-six.vercel.app/",
+  },
+  {
+    title: "Secure Cloud Infrastructure Deployment on AWS",
+    medium: "AWS Cloud Infrastructure / 2026",
+    description:
+      "Provisioned a custom Amazon VPC with public and private subnets, route tables, and internet gateway, deployed an EC2-hosted web server demonstrating end-to-end cloud network architecture. Enforced identity security by configuring IAM users, groups, and least-privilege policies. Implemented a full audit and monitoring pipeline using CloudTrail and CloudWatch alarms for detecting unauthorized access.",
+    techStack: ["AWS EC2", "VPC", "IAM", "S3", "CloudTrail", "CloudWatch", "Security Groups", "NACLs"],
+    github: null,
+    demo: null,
   },
   {
     title: "RMS - Restaurant Management System",

@@ -16,16 +16,6 @@ export function PrinciplesSection() {
     {
       number: "01",
       titleParts: [
-        { text: "AWS Cloud Intern Candidate", highlight: true },
-        { text: " - Full-Stack Cloud Engineer", highlight: false },
-      ],
-      description:
-        "Actively pursuing AWS Cloud Internship with hands-on expertise in VPC design, IAM hardening, EC2 deployment, and CloudTrail audit pipelines. AWS Academy certified in Cloud Security and Cloud Foundations.",
-      align: "left",
-    },
-    {
-      number: "02",
-      titleParts: [
         { text: "Software Developer Intern", highlight: true },
         { text: " - Sparks to Ideas (2023)", highlight: false },
       ],
@@ -80,7 +70,7 @@ export function PrinciplesSection() {
         {/* Section header */}
         <div ref={headerRef} className="mb-6">
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">02 / Experience</span>
-          <h2 className="mt-1 font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight">PROFESSIONAL EXPERIENCE</h2>
+          <h2 className="mt-1 font-(--font-bebas) text-3xl md:text-4xl tracking-tight">PROFESSIONAL EXPERIENCE</h2>
         </div>
 
         {/* Principles grid */}
@@ -93,7 +83,7 @@ export function PrinciplesSection() {
               </span>
 
               {/* Title */}
-              <h3 className="font-[var(--font-bebas)] text-lg md:text-xl tracking-tight leading-tight">
+              <h3 className="font-(--font-bebas) text-lg md:text-xl tracking-tight leading-tight">
                 {principle.titleParts.map((part, i) =>
                   part.highlight ? (
                     <HighlightText key={i} parallaxSpeed={0.6}>

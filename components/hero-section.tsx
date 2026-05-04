@@ -34,13 +34,13 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="hero" className="relative min-h-screen flex items-center justify-center px-4 md:px-6">
+    <section ref={sectionRef} id="hero" className="relative min-h-screen flex items-center justify-center px-4 py-12 md:px-6">
       <AnimatedNoise opacity={0.03} />
 
       {/* Main content - tight centered container */}
-      <div ref={contentRef} className="w-full max-w-2xl mx-auto text-center">
+      <div ref={contentRef} className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
         <SplitFlapAudioProvider>
-          <div className="relative overflow-hidden">
+          <div className="relative w-full overflow-hidden">
             <SplitFlapText text="YUG Upadhyay" speed={80} />
             <div className="mt-2">
               <SplitFlapMuteToggle />
@@ -48,27 +48,15 @@ export function HeroSection() {
           </div>
         </SplitFlapAudioProvider>
 
-        <h2 className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-(--font-bebas) text-[clamp(0.875rem,2vw,1.25rem)] tracking-wide text-muted-foreground/70">
-          <span>AWS Cloud Certified Engineer</span>
-          <span className="text-accent/80">|</span>
-          <span className="text-foreground/85">Full-Stack</span>
-          <span className="text-accent/80">×</span>
-          <span className="text-foreground/85">Cloud Security</span>
-          <span className="text-accent/80">×</span>
-          <span className="text-foreground/85">DevOps</span>
+        <h2 className="mt-4 max-w-2xl font-(--font-bebas) text-[clamp(0.9rem,2vw,1.25rem)] leading-tight tracking-[0.04em] text-muted-foreground/80">
+          <span className="block text-foreground/85">
+            Production-Focused Engineer <span className="text-accent/80">|</span> Full Stack <span className="text-accent/80">×</span> Cloud-Native & AWS <span className="text-accent/80">×</span>
+          </span>
+          <span className="mt-1 block text-foreground/90">AI-Augmented Development</span>
         </h2>
 
-        <p className="mt-5 mx-auto max-w-xl font-mono text-xs leading-relaxed text-muted-foreground md:text-sm">
-          <span className="text">AWS-certified Full-Stack Engineer with hands-on experience deploying secure cloud infrastructure on AWS—VPC design, IAM hardening, and CloudTrail audit pipelines. Building production-grade applications using{" "}</span>
-          <span className="inline-block">
-            MERN and Next.js
-          </span>{" "}
-          with a <span className="text">security-first mindset</span> from{" "}
-          <span className="inline-flex flex-col items-start gap-2 align-middle">
-            <span className="text-[12px] uppercase tracking-[0.25em] text-foreground/70">zero to production</span>
-    
-          </span>
-          .
+        <p className="mt-5 mx-auto max-w-2xl px-1 font-mono text-xs leading-relaxed text-muted-foreground md:text-sm">
+          Production-focused Full-Stack Engineer building and shipping scalable, cloud-native SaaS applications using MERN, Next.js, and AWS. Combines strong backend architecture with AI integration (LLMs, OpenAI API, prompt engineering) and hands-on AWS cloud infrastructure to deliver secure, high-performance systems. Accelerates development cycles through AI-augmented workflows and a security-first, scalable-architecture mindset from <span className="inline-block whitespace-nowrap text-[11px] uppercase tracking-[0.25em] text-accent md:text-[12px]">zero to production</span>.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
