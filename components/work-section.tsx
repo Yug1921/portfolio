@@ -4,17 +4,38 @@ import { useState, useRef, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ChevronDown, ChevronUp } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger)
 
+const FEATURED_COUNT = 5
+
 const experiments = [
+  {
+    title: "LinkedIn CRM Dashboard",
+    medium: "AI-Powered CRM Platform / 2026",
+    description:
+      "Built a full-stack AI-powered CRM from scratch in 3 weeks — a Chrome Extension captures LinkedIn profiles while browsing, feeding a FastAPI + Supabase ingestion pipeline. Leads are scored 0-100 by AI and surfaced on a real-time dashboard with live WebSocket updates, filters, analytics, and one-click AI-generated outreach messages.",
+    techStack: [
+      "Next.js 14",
+      "FastAPI",
+      "PostgreSQL",
+      "Supabase",
+      "TanStack Query",
+      "Framer Motion",
+      "OpenRouter AI",
+      "Chrome Manifest V3",
+    ],
+    github: "https://github.com/Yug1921/LinkedIn_CRM_Dashboard",
+    demo: "https://linked-in-crm-dashboard.vercel.app/",
+  },
   {
     title: "DPI - Deep Packet Inspector",
     medium: "Cybersecurity System / 2025",
     description:
       "Developed a Java tool that reads PCAP files, inspects each packet to detect apps and domains (YouTube, Netflix, etc.), applies block rules, and exports filtered PCAP outputs via a web dashboard.",
     techStack: [
-      "Java 17 ",
+      "Java 17",
       "Node.js",
       "Express",
       "React 19",
@@ -27,6 +48,24 @@ const experiments = [
     demo: "https://dpi-engine-java.vercel.app/dashboard",
   },
   {
+    title: "AppointmentIQ",
+    medium: "AI Booking Platform / 2026",
+    description:
+      "A full-stack appointment booking platform with two parallel paths — a manual form and a conversational AI assistant — both writing to the same database and reflected on a real-time calendar with zero refreshes. The assistant parses natural language requests, checks for conflicts, suggests alternative slots, and handles cancellations through chat.",
+    techStack: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Framer Motion",
+      "FastAPI",
+      "Supabase",
+      "OpenRouter AI",
+    ],
+    github: "https://github.com/Yug1921/appointment-IQ",
+    demo: "https://appointment-iq.vercel.app/",
+  },
+  {
     title: "ContentForge — AI Marketing Content Platform 2026",
     medium: "AI Marketing Platform / 2026",
     description:
@@ -34,6 +73,15 @@ const experiments = [
     techStack: ["Next.js", "OpenRouter AI", "Tailwind CSS", "REST API", "Prompt Engineering", "Vercel"],
     github: "https://github.com/Yug1921/ContentForge",
     demo: "https://content-forge-sand.vercel.app/",
+  },
+  {
+    title: "Corporate Action Impact Scorer",
+    medium: "AI Financial Analytics / 2026",
+    description:
+      "An AI-powered tool that ingests NSE/BSE corporate filing PDFs, extracts structured data via LLM, and computes a 5-dimension impact score (0-100) to rank announcements by market significance. Results render on a financial-terminal-style dashboard with animated score rings, radar charts, and a ranked leaderboard.",
+    techStack: ["FastAPI", "pdfplumber", "Next.js 14", "TypeScript", "Tailwind CSS", "Recharts", "OpenRouter AI"],
+    github: "https://github.com/Yug1921/corporate-action-impact-scorer",
+    demo: "https://corporate-action-impact-scorer.vercel.app/",
   },
   {
     title: "CropCart",
@@ -74,15 +122,19 @@ const experiments = [
 ]
 
 export function WorkSection() {
+  const [showAll, setShowAll] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
 
+  const visibleExperiments = showAll ? experiments : experiments.slice(0, FEATURED_COUNT)
+  const hiddenCount = experiments.length - FEATURED_COUNT
+
+  // Header animation — runs once on mount
   useEffect(() => {
-    if (!sectionRef.current || !headerRef.current || !gridRef.current) return
+    if (!sectionRef.current || !headerRef.current) return
 
     const ctx = gsap.context(() => {
-      // Header slide in from left
       gsap.fromTo(
         headerRef.current,
         { x: -60, opacity: 0 },
@@ -98,7 +150,16 @@ export function WorkSection() {
           },
         },
       )
+    }, sectionRef)
 
+    return () => ctx.revert()
+  }, [])
+
+  // Card grid animation — re-runs whenever the visible set changes
+  useEffect(() => {
+    if (!sectionRef.current || !gridRef.current) return
+
+    const ctx = gsap.context(() => {
       const cards = gridRef.current?.querySelectorAll("article")
       if (cards && cards.length > 0) {
         gsap.set(cards, { y: 60, opacity: 0 })
@@ -115,10 +176,11 @@ export function WorkSection() {
           },
         })
       }
+      ScrollTrigger.refresh()
     }, sectionRef)
 
     return () => ctx.revert()
-  }, [])
+  }, [showAll])
 
   return (
     <section ref={sectionRef} id="work" className="relative py-8 md:py-10 px-4 md:px-6">
@@ -134,14 +196,29 @@ export function WorkSection() {
         </div>
 
         {/* Responsive grid */}
-        <div
-          ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6"
-        >
-          {experiments.map((experiment, index) => (
-            <WorkCard key={index} experiment={experiment} index={index} />
+        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+          {visibleExperiments.map((experiment, index) => (
+            <WorkCard key={experiment.title} experiment={experiment} index={index} />
           ))}
         </div>
+
+        {/* View more / view less */}
+        {hiddenCount > 0 && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((prev) => !prev)}
+              className="group inline-flex items-center gap-2 rounded-md border border-accent/40 px-5 py-2.5 font-mono text-[11px] md:text-xs uppercase tracking-[0.18em] text-foreground/80 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent"
+            >
+              {showAll ? "View Less" : `View More Projects (${hiddenCount})`}
+              {showAll ? (
+                <ChevronUp className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5" />
+              ) : (
+                <ChevronDown className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-y-0.5" />
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )
@@ -156,7 +233,7 @@ function WorkCard({
     medium: string
     description: string
     techStack: string[]
-    github: string
+    github: string | null
     demo: string | null
   }
   index: number
@@ -208,30 +285,31 @@ function WorkCard({
       </div>
 
       {/* Links */}
-      {(experiment.github || experiment.demo) && (
-        <div className="flex flex-wrap gap-2 mt-1 pt-3 border-t border-border/25">
-          {experiment.github && (
-            <a
-              href={experiment.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-[10px] md:text-xs font-mono text-foreground/80 hover:text-accent font-semibold transition-all duration-300 border border-border/40 px-3 py-1.5 rounded-md hover:border-accent/80 hover:bg-accent/15"
-            >
-              → GitHub
-            </a>
-          )}
-          {experiment.demo && (
-            <a
-              href={experiment.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-[10px] md:text-xs font-mono text-foreground/80 hover:text-accent font-semibold transition-all duration-300 border border-border/40 px-3 py-1.5 rounded-md hover:border-accent/80 hover:bg-accent/15"
-            >
-              ↗ Live Demo
-            </a>
-          )}
-        </div>
-      )}
+{(experiment.github || experiment.demo) && (
+  <div className="flex flex-wrap gap-2 mt-1 pt-3 border-t border-border/25">
+    {experiment.github && (
+      <a
+        href={experiment.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-[10px] md:text-xs font-mono text-foreground/80 hover:text-accent font-semibold transition-all duration-300 border border-border/40 px-3 py-1.5 rounded-md hover:border-accent/80 hover:bg-accent/15"
+      >
+        → GitHub
+      </a>
+    )}
+
+    {experiment.demo && (
+      <a
+        href={experiment.demo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-[10px] md:text-xs font-mono text-foreground/80 hover:text-accent font-semibold transition-all duration-300 border border-border/40 px-3 py-1.5 rounded-md hover:border-accent/80 hover:bg-accent/15"
+      >
+        ↗ Live Demo
+      </a>
+    )}
+  </div>
+)}
 
       {/* Index */}
       <span className="absolute top-5 right-5 font-mono text-[11px] text-muted-foreground/40 group-hover:text-accent/50 transition-colors duration-300">
@@ -239,4 +317,4 @@ function WorkCard({
       </span>
     </article>
   )
-}
+} 
